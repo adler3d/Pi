@@ -5,7 +5,7 @@ static real get_pi2(int iters=16)
   auto b=vec2d(0,1);
   auto n=4;
   for(int i=0;i<iters;i++){
-    b=(a-b).Norm();
+    b=(a+b).Norm();
     n<<=1;
   }
   return (b-a).Mag()*n;
